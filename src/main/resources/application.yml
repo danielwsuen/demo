@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 12345678
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+  cache:
+    type: redis
+    cache-names: user
+
+cache:
+  ttl: '{"user":60,"dept":30}'
+
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: utf-8
+
+mybatis:
+  mapper-locations: com/daniel/mapper/*xml
+  type-aliases-package: com.daniel.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.daniel.mapper: debug
