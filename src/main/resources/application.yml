@@ -1,6 +1,7 @@
 spring:
   application:
     name: demo
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
@@ -14,9 +15,6 @@ spring:
   cache:
     type: redis
     cache-names: user
-
-cache:
-  ttl: '{"user":60,"dept":30}'
 
 server:
   port: 8080
@@ -33,3 +31,6 @@ mybatis:
 logging:
   level:
     com.daniel.mapper: debug
+
+cache:
+  ttl: '{"user":60,"dept":30}'

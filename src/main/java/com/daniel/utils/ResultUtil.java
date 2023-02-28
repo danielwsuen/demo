@@ -1,6 +1,6 @@
 package com.daniel.utils;
 
-import vo.MyResult;
+import com.daniel.vo.MyResult;
 
 public class ResultUtil {
 
